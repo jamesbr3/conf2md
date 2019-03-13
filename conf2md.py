@@ -5,7 +5,7 @@
 # see requirements.txt for Python dependencies
 #
 # Specify username and password (API token) in environment variables:
-#   ATLASSIAN_TOKEN=you@example.com
+#   ATLASSIAN_USER=you@example.com
 #   ATLASSIAN_TOKEN=xxxxxxx
 #
 # Obtain an API token from: https://id.atlassian.com
