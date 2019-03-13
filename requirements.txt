@@ -1,0 +1,8 @@
+# setup using:
+# pip install -r requirements.txt
+
+html2text
+requests
+argparse
+json
+getpass
