@@ -15,6 +15,7 @@ Where Content-URI is of the form: `https://example.atlassian.net/wiki/spaces/SPA
 ## API token
 
 A Confluence API token can be obtained from https://id.atlassian.com
+
 Navigate to Security -> API token -> Create and manage API tokens
 
 It is recommended to use an API token (instead of your password) if this script is automated in any way
