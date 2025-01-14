@@ -47,7 +47,7 @@ class Confluence(object):
     pass
 
   def apiuri(self, uri):
-    return self.base + '/rest/api/' + uri
+    return self.base + '/wiki/api/v2/' + uri#/rest/api/' + uri
 
   def url_parts(uri):
     rx = re.compile(r"(http[s*]:\/\/.+\/wiki)\/spaces\/(\w+)\/pages\/(\d+)\/(.+)")
@@ -111,12 +111,14 @@ class Confluence(object):
     
 
   def children(self, pageid):
-    uri = self.apiuri(f'content/{pageid}/child')
+    #uri = self.apiuri(f'content/{pageid}/child')
+    uri = self.apiuri(f'/pages/{pageid}/children')
     params = {'expand': ['page']}
     r = requests.get(uri, params=params, auth=self.creds,headers=self.headers)
+    print(r.text)
     j = json.loads(r.text)
     #print(json.dumps(j, indent=2))
-    #print(r.text)
+    
     
     return [
       PageParts(
